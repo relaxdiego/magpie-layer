@@ -106,9 +106,10 @@ def check_min_speed(min_speed, iperf_speed):
 
 def check_nodes(nodes, iperf_client=False):
     cfg = hookenv.config()
-    local_ip = hookenv.unit_private_ip()
-    ip_prefix = '.'.join(local_ip.split('.')[0:3])
-    iface_line = subprocess.check_output(["ip", "route", "get", ip_prefix])
+    #local_ip = hookenv.unit_private_ip()
+    #ip_prefix = '.'.join(local_ip.split('.')[0:3])
+    #iface_line = subprocess.check_output(["ip", "route", "get", ip_prefix])
+    iface_line = subprocess.check_output(["ip", "route", "show", "default"])
     primary_iface = str(iface_line).split('dev')[1].split(' ')[1]
     iface_mtu = get_nic_mtu(primary_iface)
     required_mtu = cfg.get('required_mtu')
