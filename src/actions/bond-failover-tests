@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+def main():
+    # Get the destination addresses
+    # Get the bonded interface to be used for a destination
+    # Get the bonding slaves for a bonded interface
+    # Get the configured MTU for the bonding slave
+    # Run ping -Mdo -s <MTU-MINUS-28> -c5 <DESTINATION-IP>
+    # Parse the output and save somewhere
+    # Return with message saying test has completed and to use get-report
+    pass
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,7 @@
+bond-failover-tests:
+  desription: Executes the bond failover tests and produces results that can be retreived via the `get-report` action.
+  params:
+    dest:
+      type: string
+      description: A comma-delimited list of destination IPs to test against
+get-report:
